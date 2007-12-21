@@ -13,6 +13,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/D/DP/DPARIS/%{module}-%{version}
 Url:            http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 BuildRequires:  perl-Crypt-CBC
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The module implements the Crypt::CBC interface.
