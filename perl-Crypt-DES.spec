@@ -1,7 +1,7 @@
 %define module	Crypt-DES
 %define name	perl-%{module}
 %define version 2.05
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
