@@ -1,7 +1,7 @@
 %define module	Crypt-DES
 %define name	perl-%{module}
 %define version 2.05
-%define release %mkrel 6
+%define release %mkrel 7
 
 Name:		%{name}
 Version:	%{version}
@@ -12,7 +12,8 @@ Summary:	Perl DES encryption module
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DP/DPARIS/%{module}-%{version}.tar.bz2
 Url:            http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
-BuildRequires:  perl-Crypt-CBC
+# avoid build dependency on perl-Crypt-CBC to avoid dependency cycles
+# https://qa.mandriva.com/show_bug.cgi?id=43033
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
