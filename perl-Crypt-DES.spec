@@ -4,7 +4,7 @@
 Summary:	Perl DES encryption module
 Name:		perl-%{module}
 Version:	%{version}
-Release:	15
+Release:	16
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
