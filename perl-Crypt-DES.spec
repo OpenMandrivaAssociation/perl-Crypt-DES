@@ -3,12 +3,12 @@
 
 Summary:	Perl DES encryption module
 Name:		perl-%{module}
-Version:	%{version}
-Release:	19
+Version:	%perl_convert_version 2.07
+Release:	1
 License:	GPLv2 or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DP/DPARIS/%{module}-%{version}.tar.bz2
+Source0:	http://www.cpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
 BuildRequires:	perl-devel
 # avoid build dependency on perl-Crypt-CBC to avoid dependency cycles
 # https://qa.mandriva.com/show_bug.cgi?id=43033
@@ -21,7 +21,7 @@ The module implements the Crypt::CBC interface.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="$RPM_OPT_FLAGS"
+%make CFLAGS="%{optflags}"
 
 %check
 %make test
@@ -34,4 +34,5 @@ The module implements the Crypt::CBC interface.
 %{perl_vendorarch}/Crypt
 %{perl_vendorarch}/auto/Crypt
 %{_mandir}/man3/*
+
 
