@@ -1,2 +1,4 @@
+removed_sources:
+  Crypt-DES-2.05.tar.bz2: 02edcc869d1c46639a05424e71cb17e1f265863e
 sources:
-  "Crypt-DES-2.05.tar.bz2": 02edcc869d1c46639a05424e71cb17e1f265863e
+  Crypt-DES-2.07.tar.gz: 1fa769fa6f1dbe9781388cd9738ea93e579517df
