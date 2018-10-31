@@ -3,7 +3,7 @@
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
-Release:	7
+Release:	8
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
