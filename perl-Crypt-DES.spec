@@ -1,4 +1,7 @@
-%define module	Crypt-DES
+# Work around incomplete debug packages
+%global _empty_manifest_terminate_build 0
+
+%define module Crypt-DES
 %define upstream_version 2.07
 
 Name:		perl-%{module}
@@ -17,23 +20,20 @@ BuildRequires:	perl-devel
 The module implements the Crypt::CBC interface.
 
 %prep
-%setup -q -n %{module}-%{upstream_version}
+%autosetup -n %{module}-%{upstream_version} -p1
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build CFLAGS="%{optflags}"
 
 %check
 %make test
 
 %install
-%makeinstall_std
-
-%clean
+%make_install
 
 %files
 %doc README COPYRIGHT
 %{perl_vendorarch}/Crypt
 %{perl_vendorarch}/auto/Crypt
-%{_mandir}/man3/*
-
+%doc %{_mandir}/man3/*
