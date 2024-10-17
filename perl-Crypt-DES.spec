@@ -11,7 +11,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
 Source0:	http://www.cpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
-Url:            http://search.cpan.org/dist/%{module}/
+Url:            https://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 # avoid build dependency on perl-Crypt-CBC to avoid dependency cycles
 # https://qa.mandriva.com/show_bug.cgi?id=43033
