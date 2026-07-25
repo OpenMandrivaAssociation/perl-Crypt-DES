@@ -5,13 +5,13 @@
 %define upstream_version 2.07
 
 Name:		perl-%{module}
-Version:	%perl_convert_version %{upstream_version}
-Release:	9
+Version:	%{upstream_version}
+Release:	10
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
-Source0:	http://www.cpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
-Url:            https://search.cpan.org/dist/%{module}/
+Source0:	https://cpan.metacpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
+Url:            https://metacpan.org/dist/Crypt-DES
 BuildRequires:	make
 BuildRequires:	perl-devel
 # avoid build dependency on perl-Crypt-CBC to avoid dependency cycles
