@@ -2,11 +2,9 @@
 %global _empty_manifest_terminate_build 0
 
 %define module Crypt-DES
-%define upstream_version 2.07
-
 Name:		perl-%{module}
-Version:	%{upstream_version}
-Release:	10
+Version:	2.07
+Release:	11
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
@@ -21,7 +19,7 @@ BuildRequires:	perl-devel
 The module implements the Crypt::CBC interface.
 
 %prep
-%autosetup -n %{module}-%{upstream_version} -p1
+%autosetup -n %{module}-%{version} -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
