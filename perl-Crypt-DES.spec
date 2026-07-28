@@ -4,7 +4,7 @@
 %define module Crypt-DES
 Name:		perl-%{module}
 Version:	2.07
-Release:	11
+Release:	12
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
@@ -22,6 +22,9 @@ The module implements the Crypt::CBC interface.
 %autosetup -n %{module}-%{version} -p1
 
 %build
+# old XS: clang defaults to -Werror=implicit-function-declaration
+export CFLAGS="${CFLAGS:-%{optflags}} -Wno-error=implicit-function-declaration -Wno-implicit-function-declaration"
+export CXXFLAGS="${CXXFLAGS:-%{optflags}} -Wno-error=implicit-function-declaration -Wno-implicit-function-declaration"
 perl Makefile.PL INSTALLDIRS=vendor
 %make_build CFLAGS="%{optflags}"
 
