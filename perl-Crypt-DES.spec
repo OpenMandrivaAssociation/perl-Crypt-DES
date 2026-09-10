@@ -3,12 +3,12 @@
 
 %define module Crypt-DES
 Name:		perl-%{module}
-Version:	2.07
-Release:	13
+Version:	2.09
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl DES encryption module
-Source0:	https://cpan.metacpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Crypt-DES-2.09.tar.gz
 Url:            https://metacpan.org/dist/Crypt-DES
 BuildRequires:	make
 BuildRequires:	perl-devel
